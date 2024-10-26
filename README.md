@@ -1,5 +1,5 @@
 # Neural-Global-Transport
-This repository contains the implementation of our ICLR 2023 paper [Learning to Estimate Single-View Volumetric Flow Motions without 3D Supervision](https://openreview.net/forum?id=2vmGv5wPDBZ)
+This repository contains the implementation paper [Learning to Estimate Single-View Volumetric Flow Motions without 3D Supervision](https://openreview.net/forum?id=2vmGv5wPDBZ)
 ([Project Website](https://ge.in.tum.de/publications/2023-franz-neuralglobtrans/), [arXiv](https://arxiv.org/abs/2302.14470))  
 This work is based on our previous [Global Transport for Fluid Reconstruction with Learned Self-Supervision](https://openaccess.thecvf.com/content/CVPR2021/html/Franz_Global_Transport_for_Fluid_Reconstruction_With_Learned_Self-Supervision_CVPR_2021_paper.html) ([code](https://github.com/tum-pbs/Global-Flow-Transport))  
 
@@ -11,17 +11,12 @@ We address the challenging problem of jointly inferring the 3D flow and volumetr
 
 - A Linux system with a Cuda-capable GPU
 - CUDA 9.2
-- gcc/g++ <= 7.x (we used 5.5)
+- gcc/g++ <= 7.x
 - Python 3.6, with packages:
 	- numpy 1.17.2
 	- Tensorflow-GPU v1.12
 	- munch 2.5.0
 	- imageio 2.6.0 (with its freeimage binary)
-- We include parts of the [CUDA Samples](https://github.com/NVIDIA/cuda-samples)
-- We include [OpenGL Mathematics](https://glm.g-truc.net/0.9.9/index.html) [v. 0.9.9.6](https://github.com/g-truc/glm/tree/0.9.9.6) (GLM), MIT license
-
-
-## Installation
 
 - Install Python and setup the environment via [conda](https://docs.conda.io/en/latest/miniconda.html):
 	```
@@ -74,22 +69,4 @@ python eval_runs.py -o "eval" --render --simulation 80 --frameRange 20 151 1 -d 
 ```
 To save the generated volumes add the `--saveVol` flag.
 
-## Example Results
-![Results Image](images/SF_targets.PNG)  
-
-
-## Citation
-```
-@InProceedings{Franz_2023_ICLR,
-    author    = {Franz, Erik and Solenthaler, Barbara and Thuerey, Nils},
-    title     = {Learning to Estimate Single-View Volumetric Flow Motions without 3D Supervision},
-    booktitle = {},
-    month     = {May},
-    year      = {2023},
-    pages     = {}
-}
-```
-
-## Acknowledgements
-This work was supported by the Siemens/IAS Fellowship Digital Twin, and the DFG Research Unit TH 2034/2-1.
 
